@@ -1,0 +1,53 @@
+:root {
+    --pastel-light-pink: #FFD1DC;
+    --pastel-medium-pink: #FFB3BA;
+    --pastel-dark-pink: #FF8B94;
+    --pastel-peach: #FFC3A0;
+    --pastel-lavender: #E6A9EC;
+    --dark-gray: #333333;
+    --medium-gray: #555555;
+}
+
+* {
+    font-family: "Courgette", serif;
+    margin: 0;
+}
+
+body {
+    background-color: var(--pastel-light-pink); /* Fondo pastel claro */
+    color: var(--dark-gray); /* Color oscuro para el texto */
+    max-width: 800px;
+    margin: 0 auto;
+    height: 100vh;
+    background-image: url("img/detalle1.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    padding-top: 30vh;
+    padding-bottom: 20vh;
+    text-align: center;
+    font-size: 20px;
+
+}
+
+p {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.especial {
+    color: var(--pastel-dark-pink); /* Color oscuro para el texto especial */
+}
+
+
+@media (max-width: 600px) {
+    body {
+        background-size: 100%;
+        padding-top: 15vh;
+    }
+    p {
+        width: 250px;
+    }
+   
+    
+}
+

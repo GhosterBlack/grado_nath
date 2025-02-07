@@ -137,9 +137,9 @@ document.addEventListener("DOMContentLoaded", ()=> {
 
         let mensaje = "Hola, Natalia. "+nombre+"";
         if (nombre.includes("y")) {
-            mensaje += ", confirman asistencia. Gracias por la invitacion"
+            mensaje += ", confirman asistencia. Gracias por la invitacion 💗"
         } else {
-            mensaje += ", confirmo asistencia. Gracias por la invitacion"
+            mensaje += ", confirmo asistencia. Gracias por la invitacion 💗"
         }
         let enlace = "https://wa.me/573209927694/?text="+mensaje;
         a.href = enlace;

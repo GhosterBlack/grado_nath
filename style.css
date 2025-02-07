@@ -14,14 +14,16 @@
 }
 
 body {
-    background-color: var(--pastel-light-pink); /* Fondo pastel claro */
-    color: var(--dark-gray); /* Color oscuro para el texto */
+    background-color: var(--pastel-light-pink);
+    /* Fondo pastel claro */
+    color: var(--medium-gray);
+    /* Color oscuro para el texto */
     max-width: 800px;
     margin: 0 auto;
     height: 100vh;
-    background-image: url("img/detalle1.png");
-    background-repeat: no-repeat;
-    background-position-x: center;
+    background-image: url("img/detalle1.png"), url("img/enredadera.png"), url("img/enredadera.png");
+    background-repeat: no-repeat, repeat-y, repeat-y;
+    background-position-x: center, left, right;
     padding-top: 30vh;
     padding-bottom: 20vh;
     text-align: center;
@@ -34,20 +36,160 @@ p {
     margin: 0 auto;
 }
 
+.hora-lugar .icono {
+    background-image: url("img/ubicacion.png");
+
+}
+
+.hora-lugar * {
+    margin-top: 20px;
+}
+
+.no-ninos .icono {
+    background-image: url("img/niñoZzz.png");
+}
+
 .especial {
-    color: var(--pastel-dark-pink); /* Color oscuro para el texto especial */
+    color: var(--pastel-dark-pink);
+    /* Color oscuro para el texto especial */
+}
+
+.container {
+    background-color: var(--pastel-medium-pink);
+    padding: 20px;
+}
+
+.container p {
+    width: auto;
+}
+
+.reproductor {
+    margin: 50px auto;
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+
+.play {
+    width: 50px;
+    height: 50px;
+    background-image: url("img/play.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-left: 20px;
+}
+
+.pause {
+    width: 50px;
+    height: 50px;
+    background-image: url("img/pausa.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-left: 20px;
+
+}
+
+.next {
+    width: 40px;
+    height: 40px;
+    background-image: url("img/next.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-left: 20px;
+}
+
+.previus {
+    width: 40px;
+    height: 40px;
+    background-image: url("img/next.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transform: rotate(180deg);
+}
+
+.flor {
+    width: 100%;
+    height: 55px;
+    background-image: url("img/flores.png");
+    background-size: 100px;
+}
+
+.tiempo {
+    text-align: center;
+}
+
+.tiempo div {
+    font-size: 30px;
+}
+
+.espera {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.fecha {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    text-align: center;
+}
+
+.fecha .decorate {
+    font-size: 18px;
+    border-top: 5px solid var(--pastel-dark-pink);
+    border-bottom: 5px solid var(--pastel-dark-pink);
+    padding: 10px;
+}
+
+.fecha .numero {
+    font-size: 29px;
+    padding: 10px;
+}
+
+.animate {
+    transform: translateY(20px);
+    filter: opacity(0);
+    transition: all .3s;
+}
+
+.animate.active {
+    transform: translateY(0px);
+    filter: opacity(1);
+    transition: all .3s;
+}
+
+.codigo-vestimenta .icono {
+    background-image: url("img/formal.png"); 
+    margin-bottom: 20px;
+}
+
+.tipo-regalo .icono {
+    background-image: url("img/sobre.png");
+}
+
+.asistencia .icono {
+    background-image: url("img/calendario.png");
+}
+
+.icono {
+    width: 40px;
+    height: 40px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 10px auto;
 }
 
 
 @media (max-width: 600px) {
     body {
-        background-size: 100%;
+        background-size: 100%, 20%, 20%;
         padding-top: 15vh;
+        
     }
+
     p {
         width: 250px;
     }
-   
-    
-}
 
+
+}

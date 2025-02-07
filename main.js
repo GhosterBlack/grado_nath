@@ -1,7 +1,100 @@
+const invitados = [
+    "Mauro",
+    "Mary Luz",
+    "josue",
+    "Eloina",
+    "Juliet",
+    "Simón",
+    "Tere",
+    "Álvaro",
+    "Olga",
+    "Fanny",
+    "Claudia",
+    "Emiro",
+    "Esperanza",
+    "Claudia",
+    "Sara",
+    "Esteban",
+    "Nicolás",
+    "Yurany",
+    "David",
+    "Augusto",
+    "Samuel",
+    "Yimmy",
+    "Maribel",
+    "Sofía",
+    "Harrison",
+    "Mónica",
+    "Jaime",
+    "Angélica",
+    "Aurora",
+    "Miguel acero",
+    "Gladis acero",
+    "Juan Pablo",
+    "Yeraldo",
+    "Anniel",
+    "Francy",
+    "Víctor piñeros",
+    "Gisela",
+    "Sofía",
+    "Víctor castaño",
+    "fidelia",
+    "Juan Pablo",
+    "Estefany",
+    "Stella Alonso",
+    "Enrique",
+    "Estella",
+    "Joel",
+    "Yessica",
+    "Albita",
+    "Robert",
+    "Virginia",
+    "Jorgito Fonseca",
+    "Adriana",
+    "María Helena",
+    "Anita",
+    "Maryis",
+    "Pilar",
+    "Miguel",
+    "Teresita",
+    "Yeissi",
+    "lucho",
+    "Jorge joven",
+    "Marco",
+    "Eduardo",
+    "María",
+    "Guillermo",
+    "Magda",
+    "Judith",
+    "hector",
+    "Angie",
+    "Cristian",
+    "Alex",
+    "Lorena",
+    "Mariana",
+    "Cecilia",
+    "Natalia",
+    "Amparo",
+    "Eugenio",
+    "Iván",
+    "Jhon",
+    "Jazmín",
+    "Nerio",
+    "Fercho",
+    "Flor",
+    "Ángela",
+    "Lien",
+    "Euledis"
+  ];
+  
+
 document.addEventListener("DOMContentLoaded", ()=> {
     const fecha = new Date("02/23/2025");
     const hoy = new Date();
-    const invitados = [""];
+    const params = location.search;
+    let nombre = ""
+    
+    
 
 
     // * Variables de Dom
@@ -12,11 +105,22 @@ document.addEventListener("DOMContentLoaded", ()=> {
     const previus = document.getElementById("previus");
     const next = document.getElementById("next");
     const play = document.getElementById("play");
+    const especial = document.getElementById("especial");
+    const confirmar = document.getElementById("confirmar");
+    const a = document.querySelector("a");
     /**
      * @type {HTMLAudioElement}
      */
     const audio = document.getElementById("audio");
     let pause = true;
+
+    let indexId = params.indexOf("id");
+    if (indexId > -1) {
+        let id = parseFloat(params.substring(indexId+"id=".length))-1;
+        nombre = invitados[id]
+        especial.innerHTML = "¡Te esperamos, "+nombre+"!";
+        
+    }
 
     play.onclick = ()=> {
         if (pause) {
@@ -52,6 +156,14 @@ document.addEventListener("DOMContentLoaded", ()=> {
         } else {
             audio.currentTime = audio.duration;
         }
+    }
+
+    confirmar.onclick = ()=> {
+        let mensaje = "Hola, Natalia, "+nombre+" confirma asistencia :D";
+        let enlace = "https://wa.me/573209927694/?text="+mensaje;
+        a.href = enlace;
+        a.click();
+
     }
 
     // * tick que se ejecuta cada segundo

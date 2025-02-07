@@ -179,6 +179,67 @@ p {
     margin: 10px auto;
 }
 
+.carrusel {
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.carrusel-inner {
+    display: flex;
+    width: 100%;
+    animation: slide 20s infinite;
+}
+
+.carrusel-item {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+    background-color: var(--pastel-lavender);
+}
+.carrusel-item img {
+    width: 100%;
+}
+
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--pastel-peach);
+    color: var(--dark-gray);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: var(--pastel-dark-pink);
+    transform: scale(1.05);
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    10% { transform: translateX(0); }
+    12.5% { transform: translateX(-100%); }
+    22.5% { transform: translateX(-100%); }
+    25% { transform: translateX(-200%); }
+    35% { transform: translateX(-200%); }
+    37.5% { transform: translateX(-300%); }
+    47.5% { transform: translateX(-300%); }
+    50% { transform: translateX(-400%); }
+    60% { transform: translateX(-400%); }
+    62.5% { transform: translateX(-500%); }
+    72.5% { transform: translateX(-500%); }
+    75% { transform: translateX(-600%); }
+    85% { transform: translateX(-600%); }
+    87.5% { transform: translateX(-700%); }
+    97.5% { transform: translateX(-700%); }
+    100% { transform: translateX(0); }
+}
 
 @media (max-width: 600px) {
     body {
@@ -186,7 +247,9 @@ p {
         padding-top: 15vh;
         
     }
-
+    .carrusel {
+        width: 100%;
+    }
     p {
         width: 250px;
     }

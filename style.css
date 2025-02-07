@@ -31,6 +31,16 @@ body {
 
 }
 
+.absolute {
+    position: absolute;
+    font-size: 15px;
+    left: 750px;
+}
+
+.absolute p {
+    transform: rotate(90deg);
+}
+
 p {
     width: 300px;
     margin: 0 auto;
@@ -198,10 +208,17 @@ p {
     justify-content: center;
     align-items: center;
     transition: transform 0.5s ease;
-    background-color: var(--pastel-lavender);
+    background-color: var(--pastel-dark-pink);
 }
 .carrusel-item img {
     width: 100%;
+}
+
+.flecha-espiral {
+    background-image: url("img/flecha.png");
+    width: 60px;
+    height: 60px;
+    margin-top: 90px;
 }
 
 .boton {
@@ -254,5 +271,12 @@ p {
         width: 250px;
     }
 
+    .absolute {
+        top: 55vh;
+        left: 50vw;
+        
+    }
+
+    
 
 }

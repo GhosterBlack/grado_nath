@@ -60,6 +60,7 @@ const invitados = [
     "Valen",
     "Raquel",
     "Santiago",
+    "Emiro y Esperanza"
   ];
   
 

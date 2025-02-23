@@ -57,7 +57,7 @@ const invitados = [
     "Lien y Euledis",
     "Angel",
     "Karen y Camilo",
-    "Valen",
+    "Vale",
     "Raquel",
     "Santiago",
     "Emiro y Esperanza",
